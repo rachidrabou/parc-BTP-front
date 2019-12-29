@@ -12,8 +12,15 @@
   <div class="row">
     <div class="col">
       <div class="card shadow">
-        <div class="card-header border-0">
-          <h3 class="mb-0">Card tables</h3>
+        <div class="card-header border-0 " >
+                <h3 class="mb-0">Camions De Transport</h3>
+        </div>
+        <div class="card-footer py-sm-2">
+            <ul class="pagination justify-content-end mb-0">
+              <li class="page-item disabled">
+                <a routerLink="/camion/add" routerLinkActive="active" class="btn btn-primary my-4">Ajouter un camion</a>
+              </li>
+            </ul>
         </div>
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
@@ -30,7 +37,7 @@
             <tr *ngFor="let camion of camions | async">
 
               <td>
-                {{camion.camion_id}}
+                {{camion.id}}
               </td>
               <td>
                   {{camion.marque}}
@@ -42,7 +49,7 @@
                 {{camion.chargePoids}}
               </td>
               <td>
-                <a href="#!" class="btn btn-sm btn-primary">Voir Camion</a>
+                <a class="btn btn-sm btn-primary" routerLink="/camions/{{camion.id}}" routerLinkActive="active">Voir Camion</a>
               </td>
             </tr>
             </tbody>

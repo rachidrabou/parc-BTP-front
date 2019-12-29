@@ -1,5 +1,6 @@
 import {Accessoire} from './Accessoire';
 import {Status} from './Status';
+import {ObjetChantiers} from './objetChantiers';
 
 export class Engin {
   private _id: string;
@@ -12,7 +13,16 @@ export class Engin {
   private _carburant: string;
   private _status: Status[];
   private _accessoires: Accessoire;
+  private _objetChantiers: ObjetChantiers[];
 
+
+  get objetChantiers(): ObjetChantiers[] {
+    return this._objetChantiers;
+  }
+
+  set objetChantiers(value: ObjetChantiers[]) {
+    this._objetChantiers = value;
+  }
 
   get status(): Status[] {
     return this._status;

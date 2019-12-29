@@ -1,16 +1,22 @@
 export class Camion {
-  private _camion_id: string;
+  private _id: string;
   private _marque: string;
   private _carburant: string;
   private _chargePoids: number;
 
 
-  get camion_id(): string {
-    return this._camion_id;
+  constructor( marque: string, carburant: string, chargePoids: number) {
+    this._marque = marque;
+    this._carburant = carburant;
+    this._chargePoids = chargePoids;
   }
 
-  set camion_id(value: string) {
-    this._camion_id = value;
+  get id(): string {
+    return this._id;
+  }
+
+  set id(value: string) {
+    this._id = value;
   }
 
   get marque(): string {

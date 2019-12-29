@@ -9,6 +9,15 @@ import {MagasinierLayoutRoutes} from './magasinier-layout.routing';
 import {MagasinierLayoutComponent} from './magasinier-layout.component';
 import {CamionsComponent} from '../../pages/camions/camions.component';
 import {EnginsComponent} from '../../pages/engins/engins.component';
+import {AccessoireComponent} from '../../pages/accessoire/accessoire.component';
+import {MaterielComponent} from '../../pages/materiel/materiel.component';
+import {MaterielDetailsComponent} from '../../pages/materiel-details/materiel-details.component';
+import {EnginDetailsComponent} from '../../pages/engin-details/engin-details.component';
+import {CamionDetailsComponent} from '../../pages/camion-details/camion-details.component';
+import {AjouterCamionComponent} from '../../pages/ajouter-camion/ajouter-camion.component';
+import {AjouterAccessoireComponent} from '../../pages/ajouter-accessoire/ajouter-accessoire.component';
+import {AccessoireDetailsComponent} from '../../pages/accessoire-details/accessoire-details.component';
+import {TransporteurDetailsComponent} from '../../pages/transporteur-details/transporteur-details.component';
 
 
 @NgModule({
@@ -22,7 +31,15 @@ import {EnginsComponent} from '../../pages/engins/engins.component';
   ],
   declarations: [
     CamionsComponent,
-    EnginsComponent
+    EnginsComponent,
+    AccessoireComponent,
+    MaterielComponent,
+    MaterielDetailsComponent,
+    EnginDetailsComponent,
+    CamionDetailsComponent,
+    AjouterCamionComponent,
+    AjouterAccessoireComponent,
+    AccessoireDetailsComponent
   ]
 })
 

@@ -8,6 +8,15 @@ import {
   chartExample1,
   chartExample2
 } from "../../variables/charts";
+import {MaterielService} from '../../services/materiel/materiel.service';
+import {EnginService} from '../../services/engin/engin.service';
+import {Observable} from 'rxjs';
+import {Materiel} from '../../services/materiel/classes/materiel';
+import {Engin} from '../../services/engin/classes/engin';
+import {UserService} from '../../services/user/user.service';
+import {User} from '../../services/user/classes/user';
+import {CamionServiceService} from '../../services/camion/camion-service.service';
+import {Camion} from '../../services/camion/classes/camion';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,10 +30,28 @@ export class DashboardComponent implements OnInit {
   public salesChart;
   public clicked: boolean = true;
   public clicked1: boolean = false;
+  private materiels: Materiel[];
+  private materielsOBS: Observable<Materiel[]>;
+  private engins: Engin[];
+  private enginOBS: Observable<Engin[]>;
+  private users: User[];
+  private usersOBS: Observable<User[]>;
+  private camions: Camion[];
+  private camionsOBS: Observable<Camion[]>;
 
-  constructor() { }
+  constructor(private materielService: MaterielService, private enginService: EnginService, private userService: UserService, private camionService: CamionServiceService) {
+
+  }
 
   ngOnInit() {
+    this.materielsOBS = this.materielService.getAllMateriels();
+    this.materielsOBS.subscribe((data) => { this.materiels = data; });
+    this.enginOBS = this.enginService.getAllEngins();
+    this.enginOBS.subscribe((data) => { this.engins = data; });
+    this.usersOBS = this.userService.getAllUsers();
+    this.usersOBS.subscribe((data) => { this.users = data; });
+    this.camionsOBS = this.camionService.getAllCamions();
+    this.camionsOBS.subscribe((data) => { this.camions = data; });
 
     this.datasets = [
       [0, 20, 10, 30, 15, 40, 20, 60, 60],

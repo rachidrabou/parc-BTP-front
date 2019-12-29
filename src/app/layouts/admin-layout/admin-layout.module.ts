@@ -12,6 +12,18 @@ import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MagasinierLayoutComponent} from '../magasinier-layout/magasinier-layout.component';
+import {UserComponent} from '../../pages/user/user.component';
+import {TransporteursComponent} from '../../pages/transporteurs/transporteurs.component';
+import {AdministrateurComponent} from '../../pages/administrateur/administrateur.component';
+import {MagasinierComponent} from '../../pages/magasinier/magasinier.component';
+import {ChefChantierComponent} from '../../pages/chef-chantier/chef-chantier.component';
+import {ConducteurComponent} from '../../pages/conducteur/conducteur.component';
+import {AdminProfileComponent} from '../../pages/admin-profile/admin-profile.component';
+import {AccessoireDetailsComponent} from '../../pages/accessoire-details/accessoire-details.component';
+import {TransporteurDetailsComponent} from '../../pages/transporteur-details/transporteur-details.component';
+import {MagasinierDetailsComponent} from '../../pages/magasinier-details/magasinier-details.component';
+import {ChefChantierDetailsComponent} from '../../pages/chef-chantier-details/chef-chantier-details.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -28,7 +40,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserProfileComponent,
     TablesComponent,
     IconsComponent,
-    MapsComponent
+    MapsComponent,
+    UserComponent,
+    TransporteursComponent,
+    AdministrateurComponent,
+    MagasinierComponent,
+    ChefChantierComponent,
+    ConducteurComponent,
+    AdminProfileComponent,
+    TransporteurDetailsComponent,
+    MagasinierDetailsComponent,
+    ChefChantierDetailsComponent
   ]
 })
 

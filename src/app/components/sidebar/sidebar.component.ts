@@ -16,7 +16,15 @@ export const ROUTES: RouteInfo[] = [
     { path: '/login', title: 'Login',  icon: 'ni-key-25 text-info', class: '' },
     { path: '/register', title: 'Register',  icon: 'ni-circle-08 text-pink', class: '' },
     { path: '/camions', title: 'Camions',  icon: 'fas fa-truck-moving text-red', class: '' },
-  { path: '/engins', title: 'Engins',  icon: 'fas fa-truck-monster text-yellow', class: '' }
+  { path: '/engins', title: 'Engins',  icon: 'fas fa-truck-monster text-yellow', class: '' },
+  { path: '/users', title: 'Utilisateurs',  icon: 'fas fa-user-friends text-green', class: '' },
+  { path: '/transporteurs', title: 'Transporteurs',  icon: 'fas fa-user-friends text-red', class: '' },
+  { path: '/admins', title: 'Administrateurs',  icon: 'fas fa-user-friends text-blue', class: '' },
+  { path: '/magasiniers', title: 'Magasiniers',  icon: 'fas fa-user-friends text-orange', class: '' },
+  { path: '/chefsChantier', title: 'Chefs De Chantier',  icon: 'fas fa-user-friends text-green', class: '' },
+  { path: '/conducteurs', title: 'Conducteurs',  icon: 'fas fa-user-friends text-green', class: '' },
+  { path: '/accessoires', title: 'Accessoires',  icon: 'ni ni-planet text-blue', class: '' },
+  { path: '/materiels', title: 'Matériels',  icon: 'ni ni-planet text-green', class: '' }
 
 ];
 
