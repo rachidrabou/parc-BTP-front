@@ -15,6 +15,8 @@ import {AdminProfileComponent} from '../../pages/admin-profile/admin-profile.com
 import {TransporteurDetailsComponent} from '../../pages/transporteur-details/transporteur-details.component';
 import {MagasinierDetailsComponent} from '../../pages/magasinier-details/magasinier-details.component';
 import {ChefChantierDetailsComponent} from '../../pages/chef-chantier-details/chef-chantier-details.component';
+import {ConducteurDetailsComponent} from '../../pages/conducteur-details/conducteur-details.component';
+import {AjouterAdminComponent} from '../../pages/ajouter-admin/ajouter-admin.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -31,6 +33,8 @@ export const AdminLayoutRoutes: Routes = [
   { path: 'admins/:id',           component: AdminProfileComponent },
   { path: 'transporteurs/:id',           component: TransporteurDetailsComponent },
   { path: 'magasiniers/:id',           component: MagasinierDetailsComponent },
-  { path: 'chefsChantier/:id',           component: ChefChantierDetailsComponent }
+  { path: 'chefsChantier/:id',           component: ChefChantierDetailsComponent },
+  { path: 'conducteurs/:id',           component: ConducteurDetailsComponent },
+  { path: 'admin/add',           component: AjouterAdminComponent }
 
 ];

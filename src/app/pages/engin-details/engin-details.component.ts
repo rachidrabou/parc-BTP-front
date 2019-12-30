@@ -5,6 +5,7 @@ import {MaterielService} from '../../services/materiel/materiel.service';
 import {Engin} from '../../services/engin/classes/engin';
 import {EnginService} from '../../services/engin/engin.service';
 import {ActivatedRoute} from '@angular/router';
+import {HistoriqueConduiteEngin} from '../../services/engin/classes/historiqueConduiteEngin';
 
 @Component({
   selector: 'app-engin-details',
@@ -14,9 +15,12 @@ import {ActivatedRoute} from '@angular/router';
 export class EnginDetailsComponent implements OnInit {
 
   enginObservable: Observable<Engin>;
-
+  historiqueConduiteEnginObservable: Observable<HistoriqueConduiteEngin[]>;
+  historiqueConduiteEngin: HistoriqueConduiteEngin[];
   engin: Engin;
   enginID: string;
+  dernierEtat: number;
+  private nombrePannes = 0;
 
 
   constructor(private enginService: EnginService, private route: ActivatedRoute) { }
@@ -31,7 +35,18 @@ export class EnginDetailsComponent implements OnInit {
 
   reloadData() {
     this.enginObservable = this.enginService.getEngin(this.enginID);
-    this.enginObservable.subscribe((data) => { this.engin = data; });
+    this.enginObservable.subscribe((data) => { this.engin = data;
+    this.dernierEtat = data.historiquePannes.length;
+      this.dernierEtat = data.historiquePannes.length;
+      for (let i = 0; i < this.dernierEtat ; i++) {
+        if (data.historiquePannes[i].status.etat === 'En panne') {
+          this.nombrePannes = this.nombrePannes + 1;
+        }
+      }
+    });
+
+    this.historiqueConduiteEnginObservable = this.enginService.getHistorique(this.enginID);
+    this.historiqueConduiteEnginObservable.subscribe((data) => {this.historiqueConduiteEngin = data; });
   }
 
 }

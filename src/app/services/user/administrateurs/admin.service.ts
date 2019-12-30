@@ -12,6 +12,7 @@ export class AdminService {
 
   private allAdmins = 'http://localhost:8080/admins/all';
   private adminById = 'http://localhost:8080/admins/';
+  private addAdminUrl = 'http://localhost:8080/admins/add';
 
   constructor(private http: HttpClient) {
   }
@@ -24,5 +25,9 @@ export class AdminService {
 
   getAdmin(id: string): Observable<Admin> {
     return this.http.get<Admin>(this.adminById + id);
+  }
+
+  public createAdmin(admin: Admin) {
+    return this.http.post(this.addAdminUrl, admin).subscribe(response => console.log(response));
   }
 }

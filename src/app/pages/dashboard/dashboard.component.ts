@@ -17,6 +17,7 @@ import {UserService} from '../../services/user/user.service';
 import {User} from '../../services/user/classes/user';
 import {CamionServiceService} from '../../services/camion/camion-service.service';
 import {Camion} from '../../services/camion/classes/camion';
+import {ObjetMobileService} from '../../services/objet mobile/objet-mobile.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -39,7 +40,9 @@ export class DashboardComponent implements OnInit {
   private camions: Camion[];
   private camionsOBS: Observable<Camion[]>;
 
-  constructor(private materielService: MaterielService, private enginService: EnginService, private userService: UserService, private camionService: CamionServiceService) {
+
+
+  constructor(private materielService: MaterielService, private objetMobileService: ObjetMobileService, private enginService: EnginService, private userService: UserService, private camionService: CamionServiceService) {
 
   }
 

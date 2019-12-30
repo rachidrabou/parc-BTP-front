@@ -16,7 +16,7 @@
         <div class="card-header bg-white border-0">
           <div class="row align-items-center">
             <div class="col-8">
-              <h3 class="mb-0">Ajouter un camion</h3>
+              <h3 class="mb-0">Ajouter un Engin</h3>
             </div>
             <div class="col-4 text-right">
               <a routerLink="/camions" class="btn btn-sm btn-primary">Annuler</a>
@@ -25,7 +25,7 @@
         </div>
         <div class="card-body">
           <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-            <h6 class="heading-small text-muted mb-4">Informations sur le camion </h6>
+            <h6 class="heading-small text-muted mb-4">Informations sur l"engin </h6>
             <div class="pl-lg-4">
               <div class="row">
                 <div class="col-lg-6">
@@ -36,8 +36,8 @@
                 </div>
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="Carburant">Carburant</label>
-                    <input type="text" id="Carburant" name="carburant" class="form-control form-control-alternative" placeholder="Hybride | Essence | Électrique | Diesel" ngModel>
+                    <label class="form-control-label" for="Carburant">Modele</label>
+                    <input type="text" id="Carburant" name="modele" class="form-control form-control-alternative" placeholder="2016 | 2017 | 2018 | 2019 | 2020" ngModel>
                   </div>
                 </div>
               </div>
@@ -45,16 +45,16 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="tonnage">Tonnage</label>
-                    <input type="text" id="tonnage" name="chargePoids" class="form-control form-control-alternative" placeholder="... Tonnes " ngModel>
+                    <label class="form-control-label" for="tonnage">Type</label>
+                    <input type="text" id="tonnage" name="type" class="form-control form-control-alternative" placeholder="Lourd | ..." ngModel>
                   </div>
                 </div>
 
 
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="modele">Modèle</label>
-                    <input type="text" id="modele" name="modele" class="form-control form-control-alternative" placeholder="Example : 2018 " ngModel>
+                    <label class="form-control-label" for="modele">Poids</label>
+                    <input type="text" id="modele" name="poids" class="form-control form-control-alternative" placeholder="... Tonnes" ngModel>
                   </div>
                 </div>
               </div>
@@ -62,16 +62,16 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="boiteVitesse">Boite De Vitesse</label>
-                    <input type="text" id="boiteVitesse"  name="boiteVitesse" class="form-control form-control-alternative" placeholder="Automatique | Manuelle " ngModel>
+                    <label class="form-control-label" for="boiteVitesse">Statut</label>
+                    <input type="text" id="boiteVitesse"  name="statut" class="form-control form-control-alternative" placeholder="A marche | En panne" ngModel>
                   </div>
                 </div>
 
 
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="Kilométrage">Kilométrage</label>
-                    <input type="number" id="Kilométrage" name="kilometrage" class="form-control form-control-alternative" placeholder="... KM " ngModel>
+                    <label class="form-control-label" for="Kilométrage">Désignation</label>
+                    <input type="text" id="Kilométrage" name="designation" class="form-control form-control-alternative" placeholder="A propos de l'engin " ngModel>
                   </div>
                 </div>
               </div>
@@ -79,15 +79,15 @@
               <div class="row">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="Puissance">Puissance</label>
-                    <input type="number" id="Puissance" name="puissance" class="form-control form-control-alternative" placeholder="... CV " ngModel>
+                    <label class="form-control-label" for="Puissance">Carburant</label>
+                    <input type="text" id="Puissance" name="carburant" class="form-control form-control-alternative" placeholder="Hybride | Essence | Électrique | Diesel " ngModel>
                   </div>
                 </div>
 
-            </div>
-            <div class="text-center">
-              <button type="submit"  class="btn btn-primary my-4">Ajouter le camion </button>
-            </div>
+              </div>
+              <div class="text-center">
+                <button type="submit"  class="btn btn-primary my-4">Ajouter l'engin </button>
+              </div>
             </div>
           </form>
         </div>

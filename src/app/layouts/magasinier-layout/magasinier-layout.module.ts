@@ -18,6 +18,7 @@ import {AjouterCamionComponent} from '../../pages/ajouter-camion/ajouter-camion.
 import {AjouterAccessoireComponent} from '../../pages/ajouter-accessoire/ajouter-accessoire.component';
 import {AccessoireDetailsComponent} from '../../pages/accessoire-details/accessoire-details.component';
 import {TransporteurDetailsComponent} from '../../pages/transporteur-details/transporteur-details.component';
+import {AjouterEnginComponent} from '../../pages/ajouter-engin/ajouter-engin.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import {TransporteurDetailsComponent} from '../../pages/transporteur-details/tra
     CamionDetailsComponent,
     AjouterCamionComponent,
     AjouterAccessoireComponent,
-    AccessoireDetailsComponent
+    AccessoireDetailsComponent,
+    AjouterEnginComponent
   ]
 })
 

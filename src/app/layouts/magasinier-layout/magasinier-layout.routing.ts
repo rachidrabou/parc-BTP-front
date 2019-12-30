@@ -10,6 +10,7 @@ import {CamionDetailsComponent} from '../../pages/camion-details/camion-details.
 import {AjouterCamionComponent} from '../../pages/ajouter-camion/ajouter-camion.component';
 import {AjouterAccessoireComponent} from '../../pages/ajouter-accessoire/ajouter-accessoire.component';
 import {AccessoireDetailsComponent} from '../../pages/accessoire-details/accessoire-details.component';
+import {AjouterEnginComponent} from '../../pages/ajouter-engin/ajouter-engin.component';
 
 export const MagasinierLayoutRoutes: Routes = [
   { path: 'camions',      component: CamionsComponent },
@@ -21,5 +22,6 @@ export const MagasinierLayoutRoutes: Routes = [
   { path: 'camions/:id',      component: CamionDetailsComponent },
   { path: 'camion/add',      component: AjouterCamionComponent },
   { path: 'accessoires/add',      component: AjouterAccessoireComponent },
-  { path: 'accessoires/:id',      component: AccessoireDetailsComponent }
+  { path: 'accessoires/:id',      component: AccessoireDetailsComponent },
+  { path: 'engin/add',      component: AjouterEnginComponent }
 ];

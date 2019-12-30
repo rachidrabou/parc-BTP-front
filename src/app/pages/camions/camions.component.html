@@ -26,16 +26,23 @@
           <table class="table align-items-center table-flush">
             <thead class="thead-light">
             <tr>
+              <th></th>
               <th scope="col">ID</th>
               <th scope="col">Marque</th>
+              <th scope="col">Modele</th>
               <th scope="col">Carburant</th>
-              <th scope="col">Poids Charge</th>
+              <th scope="col">Tonnage</th>
+              <th scope="col">Boite De Vitesse</th>
+              <th scope="col">Kilométrage</th>
+              <th scope="col">Puissance</th>
               <th></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let camion of camions | async">
-
+              <td>
+                <i class="fas fa-truck text-orange" ></i>
+              </td>
               <td>
                 {{camion.id}}
               </td>
@@ -43,10 +50,22 @@
                   {{camion.marque}}
               </td>
               <td>
+                {{camion.modele}}
+              </td>
+              <td>
                 {{camion.carburant}}
               </td>
               <td>
                 {{camion.chargePoids}}
+              </td>
+              <td>
+                {{camion.boiteVitesse}}
+              </td>
+              <td>
+                {{camion.kilometrage}} KM
+              </td>
+              <td>
+                {{camion.puissance}} CV
               </td>
               <td>
                 <a class="btn btn-sm btn-primary" routerLink="/camions/{{camion.id}}" routerLinkActive="active">Voir Camion</a>

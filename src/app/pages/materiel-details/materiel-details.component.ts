@@ -16,6 +16,10 @@ export class MaterielDetailsComponent implements OnInit {
 
   materiel: Materiel;
   materielID: string;
+  dernierEtat: number;
+  nombrePannes = 0;
+  emplacementParcourus = 0;
+
 
 
   constructor(private materielService: MaterielService, private route: ActivatedRoute) { }
@@ -30,7 +34,16 @@ export class MaterielDetailsComponent implements OnInit {
 
   reloadData() {
     this.materielObservable = this.materielService.getMateriel(this.materielID);
-    this.materielObservable.subscribe((data) => { this.materiel = data; });
+    this.materielObservable.subscribe((data) => {this.materiel = data;
+    this.dernierEtat = data.historiquePannes.length;
+    for (let i = 0; i < this.dernierEtat ; i++) {
+        if (data.historiquePannes[i].status.etat === 'En panne') {
+          this.nombrePannes = this.nombrePannes + 1;
+        }
+    }
+
+
+    });
   }
 
 }

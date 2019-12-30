@@ -33,6 +33,9 @@ import { AccessoireDetailsComponent } from './pages/accessoire-details/accessoir
 import { TransporteurDetailsComponent } from './pages/transporteur-details/transporteur-details.component';
 import { MagasinierDetailsComponent } from './pages/magasinier-details/magasinier-details.component';
 import { ChefChantierDetailsComponent } from './pages/chef-chantier-details/chef-chantier-details.component';
+import { ConducteurDetailsComponent } from './pages/conducteur-details/conducteur-details.component';
+import { AjouterEnginComponent } from './pages/ajouter-engin/ajouter-engin.component';
+import { AjouterAdminComponent } from './pages/ajouter-admin/ajouter-admin.component';
 
 
 @NgModule({

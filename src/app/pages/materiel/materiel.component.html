@@ -51,7 +51,7 @@
                 {{materiel.designation}}
               </td>
               <td>
-                {{materiel.status[0].etat }}
+                {{materiel.historiquePannes[materiel.historiquePannes.length - 1].status.etat }}
               </td>
               <td>
                 <a class="btn btn-sm btn-primary" routerLink="/materiels/{{materiel.id}}" routerLinkActive="active">Voir Materiel</a>

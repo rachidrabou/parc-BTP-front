@@ -13,7 +13,7 @@
     <div class="col">
       <div class="card shadow">
         <div class="card-header border-0">
-          <h3 class="mb-0">Utilisateurs</h3>
+          <h3 class="mb-0">TOUS LES UTILISATEURS</h3>
         </div>
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
@@ -28,7 +28,7 @@
               <th scope="col">Email</th>
               <th scope="col">Téléphone</th>
               <th scope="col">Role</th>
-              <th></th>
+              <th scope="col">Ville</th>
             </tr>
             </thead>
             <tbody>
@@ -38,6 +38,7 @@
                 <i class="fas fa-user text-purple" *ngIf="user.roles[0].role === 'ADMIN'"></i>
                 <i class="fas fa-user text-green" *ngIf="user.roles[0].role === 'MAGASINIER'"></i>
                 <i class="fas fa-user text-red" *ngIf="user.roles[0].role === 'Chef De Chantier'"></i>
+                <i class="fas fa-user text-black" *ngIf="user.roles[0].role === 'CONDUCTEUR'"></i>
               </td>
               <td>
                 {{user.id}}
@@ -60,11 +61,23 @@
               <td>
                 {{user.phoneNumber}}
               </td>
-              <td>
+              <td *ngIf="user.roles[0].role === 'TRANSPORTER'" class="text-orange">
+                {{user.roles[0].role}}
+              </td>
+              <td *ngIf="user.roles[0].role === 'ADMIN'" class="text-purple">
+                {{user.roles[0].role}}
+              </td>
+              <td *ngIf="user.roles[0].role === 'MAGASINIER'" class="text-green">
+                {{user.roles[0].role}}
+              </td>
+              <td *ngIf="user.roles[0].role === 'Chef De Chantier'" class="text-red">
+                {{user.roles[0].role}}
+              </td>
+              <td *ngIf="user.roles[0].role === 'CONDUCTEUR'" class="text-black">
                 {{user.roles[0].role}}
               </td>
               <td>
-                <a href="#!" class="btn btn-sm btn-primary">Voir Utilisateur</a>
+                {{user.ville}}
               </td>
             </tr>
             </tbody>
